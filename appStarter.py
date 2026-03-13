@@ -32,13 +32,13 @@ BASE_MAX_OUTPUT_TOKENS = 1400
 def get_openai_client() -> OpenAI:
     return OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-"""
-This function converts a Matplotlib figure (fig) into a 
-PNG image encoded as a “data URL” 
-(a string you can embed directly into HTML/CSS/Markdown 
-without saving a file).
+ 
+# This function converts a Matplotlib figure (fig) into a 
+# PNG image encoded as a “data URL” 
+# (a string you can embed directly into HTML/CSS/Markdown 
+# without saving a file).
 
-"""
+ 
 def figure_to_data_url(fig) -> str:
     buffer = BytesIO()
     fig.savefig(buffer, format="png", bbox_inches="tight", dpi=200)
